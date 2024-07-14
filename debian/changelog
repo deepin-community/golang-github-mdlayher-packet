@@ -1,5 +1,41 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-mdlayher-packet (1.1.2-2) unstable; urgency=medium
 
-  * Initial release
+  * Add missing version constraint for golang-github-mdlayher-socket-dev in
+    Depends
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Tue, 27 Jun 2023 07:33:34 +0000
+
+golang-github-mdlayher-packet (1.1.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump minimum required golang-github-mdlayher-socket-dev version to 0.4.1
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Tue, 27 Jun 2023 07:16:12 +0000
+
+golang-github-mdlayher-packet (1.1.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop obsolete 01-fix-big-endian-build.patch
+  * Relax golang-github-josharian-native-dev version constraint
+  * Bump Standards-Version to 4.6.2 (no changes)
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Thu, 22 Dec 2022 13:48:37 +0000
+
+golang-github-mdlayher-packet (1.1.0-3) unstable; urgency=medium
+
+  * Add new 01-fix-big-endian-build.patch
+  * Bump minimum required golang-github-josharian-native-dev version to 1.1.0
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Thu, 22 Dec 2022 11:59:35 +0000
+
+golang-github-mdlayher-packet (1.1.0-2) unstable; urgency=medium
+
+  * No-change source re-upload
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Fri, 16 Dec 2022 12:14:08 +0000
+
+golang-github-mdlayher-packet (1.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1026123)
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Thu, 15 Dec 2022 06:34:31 +0000

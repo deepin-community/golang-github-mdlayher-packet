@@ -1,15 +1,35 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-mdlayher-packet
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Daniel Swarbrick <dswarbrick@debian.org>,
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-golang,
+               golang-any,
+               golang-github-google-go-cmp-dev,
+               golang-github-josharian-native-dev,
+               golang-github-mdlayher-socket-dev (>= 0.4.1),
+               golang-golang-x-net-dev,
+               golang-golang-x-sys-dev,
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-mdlayher-packet
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-mdlayher-packet.git
+Homepage: https://github.com/mdlayher/packet
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/mdlayher/packet
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-mdlayher-packet-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: golang-github-google-go-cmp-dev,
+         golang-github-josharian-native-dev,
+         golang-github-mdlayher-socket-dev (>= 0.4.1),
+         golang-golang-x-net-dev,
+         golang-golang-x-sys-dev,
+         ${misc:Depends},
+Description: Go library for Linux packet sockets (AF_PACKET)
+ github.com/mdlayer/packet is a successor to github.com/mdlayher/raw,
+ but exclusively focused on Linux and AF_PACKET sockets. The APIs are
+ nearly identical, but with a few changes which take into account some
+ of the lessons learned while working on raw.
